@@ -1,0 +1,140 @@
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:400,700");
+.dropdown a {
+  color: #808080;
+}
+a:hover,
+a:focus {
+  color: #4f7345;
+  text-decoration: underline;
+}
+a {
+  color: #33781e;
+  text-decoration: none;
+}
+.logo {
+  width: 254px;
+  height: 200px;
+  background-image: url(img_logo_openfeeder.png);
+  background-size: 63%;
+  background-repeat: no-repeat;
+  margin: 50px;
+  float: left;
+  position: absolute;
+}
+#title {
+  margin-left: 30px;
+}
+#navbar-main {
+  border-bottom: 1px solid;
+}
+.navbar-inverse .badge {
+  background-color: #fff;
+  color: #d9230f;
+}
+.btn {
+  font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+.btn-default,
+.btn-default:hover {
+  filter: none;
+  border: 1px solid #2e2f2f;
+}
+.btn-primary,
+.btn-primary:hover {
+  filter: none;
+  border: 1px solid #a91b0c;
+}
+.btn-success,
+.btn-success:hover {
+  filter: none;
+  border: 1px solid #2f6405;
+}
+.btn-info,
+.btn-info:hover {
+  filter: none;
+  border: 1px solid #02749c;
+}
+.btn-warning,
+.btn-warning:hover {
+  filter: none;
+  border: 1px solid #79377c;
+}
+.btn-danger,
+.btn-danger:hover {
+  filter: none;
+  border: 1px solid #ac6819;
+}
+body {
+  font-weight: 200;
+}
+th {
+  color: #444444;
+}
+legend {
+  color: #444444;
+}
+label {
+  font-weight: normal;
+}
+.has-warning .help-block,
+.has-warning .control-label,
+.has-warning .radio,
+.has-warning .checkbox,
+.has-warning .radio-inline,
+.has-warning .checkbox-inline,
+.has-warning.radio label,
+.has-warning.checkbox label,
+.has-warning.radio-inline label,
+.has-warning.checkbox-inline label,
+.has-warning .form-control-feedback {
+  color: #d9831f;
+}
+.has-warning .form-control,
+.has-warning .form-control:focus {
+  border-color: #d9831f;
+}
+.has-error .help-block,
+.has-error .control-label,
+.has-error .radio,
+.has-error .checkbox,
+.has-error .radio-inline,
+.has-error .checkbox-inline,
+.has-error.radio label,
+.has-error.checkbox label,
+.has-error.radio-inline label,
+.has-error.checkbox-inline label,
+.has-error .form-control-feedback {
+  color: #d9230f;
+}
+.has-error .form-control,
+.has-error .form-control:focus {
+  border-color: #d9230f;
+}
+.has-success .help-block,
+.has-success .control-label,
+.has-success .radio,
+.has-success .checkbox,
+.has-success .radio-inline,
+.has-success .checkbox-inline,
+.has-success.radio label,
+.has-success.checkbox label,
+.has-success.radio-inline label,
+.has-success.checkbox-inline label,
+.has-success .form-control-feedback {
+  color: #469408;
+}
+.has-success .form-control,
+.has-success .form-control:focus {
+  border-color: #469408;
+}
+.pager a {
+  color: #444444;
+}
+.pager a:hover,
+.pager .active > a {
+  border-color: #d9230f;
+  color: #fff;
+}
+.pager .disabled > a {
+  border-color: #dddddd;
+}

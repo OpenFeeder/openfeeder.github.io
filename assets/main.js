@@ -1,0 +1,6 @@
+$(function(){
+    $(".dropdown-toggle").click(function(){
+        $(this).next(".dropdown-menu").toggle();
+    });
+});
+
