@@ -1,27 +1,262 @@
+<!-- March 2017, Vincent VIVANLOC for OpenFeeder -->
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>OpenFeeder project</title>
-	</head>
-	<body>
-	<h1>OpenFeeder project</h1>
-	<img src="./img/img_logo_openfeeder.png"/>
-<h2>Summary</h2>
-<p>This project should enable the implementation of an autonomous birds food distribution system, including an identification of each individual by their RFID chips (125 kHz technology) and a parametric distribution according to individuals and time slots. All data is saved on a removable memory media, in order to process in a second time the frequenting of the feeder.</p>
-<p>For more information about this project, see <a href="https://www.youtube.com/watch?v=vyiVRtNkrHI">IAST Newcomers 2014 - Maxime Cauchoix</a> and read this <a href="https://docs.google.com/document/d/1HbaWMe1Ht085f7VVjddLcBeI3NcZt-81qIP3hx4l6DE/edit?usp=sharing">document in french</a> and also this one: <a href="https://drive.google.com/open?id=1DaUU0x_wUZSqDEomvS16wGJ-7Y2ng5Lx9hKu_dAWyXA">Pr�sentation du projet OpenFeeder au FabLab Artilect</a></p>
-<p>To report a bug in the software or to request a simple enhancement contact:  <a href="mailto:arnauld.biganzoli@gmail.com,jbtechlab@gmail.com">Developer Team</a></p>
-<p>If you're interested in modifying or extending the OpenFeeder software or hardware, we strongly suggest discussing your ideas whit the developers before starting to work on them. That way you can coordinate with the OpenFeeder Team and others, giving your work a higher chance of being integrated into the official release.</p>
-<h2>Licence</h2>
-<p>OpenFeeder is an open source project ;-)</p>
-<h2>Credits</h2>
-<p>The OpenFeeder team is composed of</p>
-<ul>
-<li><a href="http://www.iast.fr/member/maxime-cauchoix">Maxime CAUCHOIX</a></li>
-<li><a href="http://tonic.inserm.fr/arnauld-biganzoli-404340.kjsp">Arnauld BIGANZOLI</a></li>
-<li><a href="http://select-design.net/">Vincent GUIRAUD</a></li>
-<li><a href="http://blog.developpez.com/dut/">J�r�me BRIOT</a></li>
-<li><a href="mailto:mcrespin31@gmail.com">Maurice CRESPIN</a></li>
-</ul>
-	</body>
-</html>
+<html lang="en">
 
+<head>
+  <meta charset="utf-8">
+  <title>Projet OpenFeeder</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+  <!-- favicon generated with http://realfavicongenerator.net  -->
+
+  <link rel="apple-touch-icon" sizes="180x180" href="./assets/favicons/apple-touch-icon.png">
+  <link rel="icon" type="image/png" href="./assets/favicons/favicon-32x32.png" sizes="32x32">
+  <link rel="icon" type="image/png" href="./assets/favicons/favicon-16x16.png" sizes="16x16">
+  <link rel="manifest" href="./assets/favicons/manifest.json">
+  <link rel="mask-icon" href="./assets/favicons/safari-pinned-tab.svg" color="#5bbad5">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- bootstrap -->
+  <link rel="stylesheet" href="./dist/css/bootstrap.min.css" media="screen">
+  <link rel="stylesheet" href="./dist/css/theme.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u"
+  crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp"
+  crossorigin="anonymous">
+
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./assets/js/main.js"></script>
+  <script src="https://www.youtube.com/player_api"></script>
+
+
+  <body data-spy="scroll" data-target=".navbar" data-offset="50">
+
+
+    <!-- responsive navbar -->
+    <nav role="navigation" class="navbar navbar-default navbar-fixed-top" id="navbar-main">
+
+      <div class="container">
+
+        <div class="navbar-header">
+          <!--create sandwich button with 3 bars-->
+          <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">            
+            <span class="sr-only">Navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="https://github.com/OpenFeeder">OpenFeeder
+            <!--<img class=" navbar-brand minilogo"></img>-->
+          </a>
+
+        </div>
+
+        <!-- navbar entries -->
+        <div class="collapse navbar-collapse" id="navbarCollapse">
+          <ul class="nav navbar-nav">
+            <li><a href="#principle">Présentation</a></li>
+            <li><a href="#project">Projet</a></li>
+            <li><a href="#team">Equipe</a></li>
+            <li class="dropdown">
+              <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" id="themes">Participer 
+                <span class="caret"></span></a>
+                <ul class="dropdown-menu" aria-labelledby="Participer">
+                  <li>
+                    <a href="https://github.com/OpenFeeder">Github</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/OpenFeeder/electronics">Electronique</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/OpenFeeder/firmwares">Firmware</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/OpenFeeder/softwares">Logiciel</a>
+                  </li>
+                  <li>
+                    <a href="https://github.com/OpenFeeder/hardware">Mécanique</a>
+                  </li>
+                </ul>
+              </li>
+
+
+            </ul>
+
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="mailto:contact.openfeeder@gmail.com" target="_blank">Contact</a></li>
+            </ul>
+          </div>
+
+        </div>
+      </nav>
+
+      <!-- content section : jumbotron -->
+
+
+
+
+
+      <div id="principle" class="row section container-fluid">
+        <div class="col-xs-12">
+          <div id="mainjumbotron" class="jumbotron">
+            <div class="logo"></div>
+            <h1>OpenFeeder</h1>
+
+            <!-- image carrousel -->
+            <div id="myCarousel" class="carousel slide" data-ride="carousel">
+              <!-- Indicators -->
+              <ol class="carousel-indicators">
+                <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                <li data-target="#myCarousel" data-slide-to="1"></li>
+                <li data-target="#myCarousel" data-slide-to="2"></li>
+                <li data-target="#myCarousel" data-slide-to="3"></li>
+                <li data-target="#myCarousel" data-slide-to="4"></li>
+              </ol>
+              <!-- Wrapper for slides -->
+              <div class="carousel-inner" role="listbox">
+                <div class="item active">
+                  <img src="./assets/images/mesange.jpg" alt="Mesange" class="img-rounded img-responsive center-block">
+                  <div class="carousel-caption">
+
+                    <h4>Mésange</h4>
+                    <small>Janek Pärn, mésange bleue à Simuna (Estonie), Wikimedia Commons</small>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <img src="./assets/images/carte.jpg" alt="Carte" class="img-rounded img-responsive center-block">
+                  <div class="carousel-caption">
+
+                    <h4>Carte éléctronique</h4>
+                    <small>version 1</small>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <img src="./assets/images/mangeoire.jpg" alt="Mangeoire" class="img-rounded img-responsive center-block">
+                  <div class="carousel-caption">
+
+                    <h4>Mangeoire</h4>
+                    <small>Mangeoire avec une porte pilotée par servo-moteur</small>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <img src="./assets/images/périphériques.jpg" alt="Périphériques" class="img-rounded img-responsive center-block">
+                  <div class="carousel-caption">
+
+                    <h4>Carte et ses périphériques</h4>
+                    <small>Vue d'ensemble des périphériques connectés à la carte</small>
+                  </div>
+                </div>
+
+                <div class="item">
+                  <div class="embed-responsive embed-responsive-16by9 center-block">
+                    <div id="main-video"></div>
+                  </div>
+                </div>
+
+
+              </div>
+
+            </div>
+            <p>
+              Système open-source abordable pour l'étude en milieu naturel 
+              du comportement social d’espèces animales (<a href="#" data-toggle="tooltip" title="<img src='./assets/images/Eurasian_blue_tit_Lancashire.jpg' />">des mésanges</a>)
+            </p>
+          </div>
+
+        </div>
+
+      </div
+
+        <!-- content section : presentation -->
+
+        <div id="project" class="row section container-fluid">
+          <div class="col-xs-12">
+
+            <h2>Présentation</h2>
+            <p>
+              Ce projet devrait permettre la mise en place d'un système autonome de distribution de nourriture pour les oiseaux, comprenant
+              une identification de chaque individu par ses puces RFID (technologie 125 kHz) et une distribution paramétrée
+              selon les individus et les créneaux horaires. Toutes les données sont sauvegardées sur un support mémoire amovible,
+              afin de traiter dans un deuxième temps la fréquentation du dispositif d'alimentation.
+            </p>
+            <p>Pour plus d'informations sur ce projet, consultez <a href="https://www.youtube.com/watch?v=vyiVRtNkrHI">IAST Newcomers 2014 - Maxime Cauchoix</a>            et lisez ce <a href="https://docs.google.com/document/d/1HbaWMe1Ht085f7VVjddLcBeI3NcZt-81qIP3hx4l6DE/edit?usp=sharing">document</a>            en français ainsi que celui-ci : <a href="https://drive.google.com/open?id=1DaUU0x_wUZSqDEomvS16wGJ-7Y2ng5Lx9hKu_dAWyXA">Présentation du projet OpenFeeder au FabLab Artilect</a>.</p>
+            <p>Pour signaler un bogue dans le logiciel ou pour suggérer une amélioration, contactez : <a href="mailto:arnauld.biganzoli@gmail.com,jbtechlab@gmail.com">l'équipe de développeurs</a>.</p>
+            <p>Si vous souhaitez modifier ou étendre le logiciel ou le matériel OpenFeeder, nous vous suggérons de discuter de
+              vos idées avec les développeurs avant de commencer à travailler avec eux. De cette façon, vous vous pouvez coordonner
+              avec l'équipe OpenFeeder et d'autres, donnant à votre travail une plus grande chance d'être intégré dans la version
+              officielle.
+            </p>
+            <h2>Licence</h2>
+            <p>OpenFeeder est un projet open source :grin:</p>
+
+          </div>
+
+          <div class="panel panel-default col-xs-9">
+           <div class="panel-heading">
+             <h4 class="panel-title">
+              <i>En Savoir plus</i>
+              </h4>
+               <a data-toggle="collapse" data-target="#collapseOne" 
+           href="#collapseOne" class="read-more"><img src="./assets/images/add-button.svg" />
+              </a>
+
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse off">
+            <div class="panel-body">
+                 <h2>But de l'OpenFeeder</h2>
+              <ul>
+                <li>Premier objectif: 
+                  Comprendre l’adaptation d'organismes (ici des oiseaux) face au changement climatique et à l’urbanisation.</li>
+                  <li>
+                    Collaborateurs: 
+                    CNRS de Moulis (station d’écologie expérimentale et théorique en Ariège) et l’IAST (institut des études avancées de Toulouse, attaché à l’école d’économie)
+                  </li>
+                  <li>
+                    Moyens: 
+                    Cartes électroniques OpenFeeder
+                    Sciences participatives (écoles, particuliers)
+                  </li>
+
+                </ul>
+            </div>
+
+            </div>
+          </div>
+        </div>
+           
+             
+          
+
+          <!-- content section : team -->
+          <div id="team" class="row section container-fluid">
+            <div class="col-xs-12">
+              <h2>Equipe</h2>
+              <p>L'équipe OpenFeeder est composée de</p>
+              <ul>
+                <li><a href="http://www.iast.fr/member/maxime-cauchoix">Maxime CAUCHOIX</a></li>
+                <li><a href="http://tonic.inserm.fr/arnauld-biganzoli-404340.kjsp">Arnauld BIGANZOLI</a></li>
+                <li><a href="http://select-design.net/">Vincent GUIRAUD</a></li>
+                <li><a href="http://blog.developpez.com/dut/">Jérôme BRIOT</a></li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- content section : team -->
+          <div id="copyright" class="row section container-fluid">
+            <div class="col-xs-12">
+              <h2>Copyright</h2>
+              <p>Le contenu du projet OpenFeeder est publié sous la Licence Creative Commons Attribution ShareAlike 3.0. CC BY-SA
+                3.0
+              </p>
+              <p>Cela signifie que vous pouvez les utiliser sur vos propres œuvres dérivées, en partie ou complètement, aussi longtemps
+                que vous adoptez également la même licence. Vous trouverez le texte complet de la licence <a href="http://creativecommons.org/licenses/by-sa/3.0/legalcode">ici</a>.</p>
+              </div>
+            </div>
+          </body>
+
+          </html>

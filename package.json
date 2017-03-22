@@ -1,0 +1,32 @@
+{
+  "name": "@openfeeder/website",
+  "title": "openfeeder website",
+  "version": "0.0.1",
+  "homepage": "https://openfeeder.github.io/",
+  "author": "Clément LESAULNIER, Vincent VIVANLOC",
+  "license": "MIT",
+    "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com:OpenFeeder/openfeeder.github.io.git"
+  },
+  "description": "openfeeder website using bootswatch simplex theme",
+  "bugs": {
+    "email": "vincent.vivanloc@laposte.net"
+  },
+  "main": "gulpfile.js",
+  "dependencies": {
+    "browser-sync": "^2.18.8",
+    "gulp": "^3.9.1",
+    "gulp-less": "^3.3.0",
+    "gulp-rename": "^1.2.0",
+    "gulp-clean-css": "^3.0.3"
+  },
+  "scripts": {
+    "test": "gulp dev"
+  },
+  "keywords": [
+    "openfeeder",
+    "website",
+    "bootswatch"
+  ]
+}
