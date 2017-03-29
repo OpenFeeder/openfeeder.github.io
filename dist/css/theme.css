@@ -76,7 +76,8 @@ body {
 .btn-default,
 .btn-default:hover {
   filter: none;
-  border: 1px solid #2e2f2f;
+  border: 1px solid #2e2f2f !important; 
+  background-image: none;
 }
 .btn-primary,
 .btn-primary:hover {
@@ -102,6 +103,11 @@ body {
 .btn-danger:hover {
   filter: none;
   border: 1px solid #ac6819;
+}
+
+.btn img {
+  width: 24px;
+  height: 24px;
 }
 /*body {
   font-weight: 200;
@@ -176,4 +182,10 @@ label {
 }
 .pager .disabled > a {
   border-color: #dddddd;
+}
+
+img.logopartenaires {
+  height: 150px; 
+  display: block;
+  width:auto;
 }

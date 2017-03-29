@@ -19,3 +19,32 @@ $(function () {
 
 });
 
+
+var player;
+function onYouTubePlayerAPIReady() {
+    player = new YT.Player('main-video', {
+      height: '390',
+      width: '640',
+      videoId: 'vyiVRtNkrHI',
+      events: {
+        onReady: onPlayerReady,
+        onStateChange: onPlayerStateChange,
+      }
+    });
+}
+
+
+// autoplay video
+function onPlayerReady(event) {
+}
+
+// when video ends
+function onPlayerStateChange(event) { 
+    if(event.data === 0) {          
+    }
+    if(event.data === 1) {  
+        $("#myCarousel").carousel('pause');
+    
+    }
+}
+
