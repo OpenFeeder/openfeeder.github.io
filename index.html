@@ -1,4 +1,4 @@
-<!-- March 2017, Vincent VIVANLOC for OpenFeeder -->
+<!-- March 2017, Vincent VIVANLOC, Clément LESAULNIER for OpenFeeder -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -30,6 +30,7 @@
   <script type="text/javascript" src="./assets/js/main.js"></script>
   <script src="https://www.youtube.com/player_api"></script>
   <link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
+  <script src="https://cdn.rawgit.com/nnattawat/flip/master/dist/jquery.flip.min.js"></script>
 
 
   <body data-spy="scroll" data-target=".navbar" data-offset="50">
@@ -100,7 +101,7 @@
 
 
     <div id="principle" class="row section container-fluid">
-      <div class="col-xs-12">
+      <div class="col-sm-8 col-sm-offset-2">
         <div id="mainjumbotron" class="jumbotron">
           <div class="logo"></div>
           <h1>OpenFeeder</h1>
@@ -117,24 +118,24 @@
             </ol>
             <!-- Wrapper for slides -->
             <div class="carousel-inner" role="listbox">
-              <div class="item active">
-                <img src="./assets/images/mesange.jpg" alt="Mesange" class="img-rounded img-responsive center-block"></img>
+              <div class="item active item-image">
+                <img src="./assets/images/mesange.jpg" alt="Mesange" class="img-responsive center-block"></img>
                 <div class="carousel-caption">
                   <h4>Mésange</h4>
                   <small>Janek Pärn, mésange bleue à Simuna (Estonie), Wikimedia Commons</small>
                 </div>
               </div>
 
-              <div class="item">
-                <img src="./assets/images/carte.jpg" alt="Carte" class="img-rounded img-responsive center-block"></img>
+              <div class="item item-image">
+                <img src="./assets/images/carte.jpg" alt="Carte" class="img-responsive center-block"></img>
                 <div class="carousel-caption">
                   <h4>Carte éléctronique</h4>
                   <small>version 1</small>
                 </div>
               </div>
 
-              <div class="item">
-                <img src="./assets/images/mangeoire.jpg" alt="Mangeoire" class="img-rounded img-responsive center-block"></img>
+              <div class="item item-image">
+                <img src="./assets/images/mangeoire.jpg" alt="Mangeoire" class="img-responsive center-block"></img>
                 <div class="carousel-caption">
                   <h4>Mangeoire</h4>
                   <small>Mangeoire avec une porte pilotée par servo-moteur</small>
@@ -142,15 +143,15 @@
               </div>
 
 
-              <div class="item">
-                <img src="./assets/images/périphériques.jpg" alt="Périphériques" class="img-rounded img-responsive center-block"></img>
+              <div class="item item-image">
+                <img src="./assets/images/périphériques.jpg" alt="Périphériques" class="img-responsive center-block"></img>
                 <div class="carousel-caption">
                   <h4>Carte et ses périphériques</h4>
                   <small>Vue d'ensemble des périphériques connectés à la carte</small>
                 </div>
               </div>
 
-              <div class="item">
+              <div class="item item-image">
                 <div class="embed-responsive embed-responsive-16by9 center-block">
                   <div id="main-video"></div>
                 </div>
@@ -160,10 +161,10 @@
             </div>
 
           </div>
-          <p>
-            Système open-source abordable pour l'étude en milieu naturel du comportement social d’espèces animales (<a href="#"
-              data-toggle="tooltip" title="<img src='./assets/images/Eurasian_blue_tit_Lancashire.jpg' />">des mésanges</a>)
-          </p>
+          <small>
+            Système open-source abordable pour l'étude en milieu naturel du comportement social d’espèces animales (
+              des mésanges)
+          </small>
         </div>
 
       </div>
@@ -171,40 +172,18 @@
     </div>
     <!-- content section : presentation -->
 
-    <div id="project" class="row section container-fluid">
-      <div class="col-xs-12">
+    <div id="project" class="row section container-fluid row-xs-height">
+      <div class="col-sm-8 col-sm-offset-2">
         <h2>Projet</h2>
         <ul>
-          <li>Objectif: Comprendre l’adaptation des organismes (oiseaux dans un premier temps) face au changement climatique
+          <li>Objectif : Comprendre l’adaptation des organismes (oiseaux dans un premier temps) face au changement climatique
             et à l’urbanisation.
           </li>
+
           <li>
-            Partenaires
+            Moyens : Cartes électroniques OpenFeeder et sciences participatives (écoles, particuliers)
           </li>
-        </ul>
-        <div class="row">
 
-          <div class="col-xs-6">
-            <a href="http://www.ecoex-moulis.cnrs.fr">
-              <img class="logopartenaires img-center center-block" src="./assets/images/logo_cnrs_moulis.jpg" data-toggle="tooltip" title="Station d’écologie expérimentale et théorique en Ariège"></img>
-              <div class="text-center">CNRS de Moulis</div>
-            </a>
-
-          </div>
-          <div class="col-xs-6">
-            <a href="http://www.iast.fr/francais">
-              <img class="logopartenaires img-center center-block" src="./assets/images/logo_iast.jpg" data-toggle="tooltip" title="Institut des Etudes Avancées de Toulouse, attaché à l’école
-              d’économie"></img>
-              <div class="text-center">IAST</div>
-            </a>
-          </div>
-
-        </div>
-
-        <ul>
-          <li>
-            Moyens: Cartes électroniques OpenFeeder et sciences participatives (écoles, particuliers)
-          </li>
         </ul>
 
         <p>
@@ -216,53 +195,141 @@
 
 
 
-        <!--<div class="row panel panel-default col-xs-12">-->
-          <!--  <div class="panel-heading">
-            <h4 class="panel-title">
-              <i>En savoir plus</i>
-            </h4>
-            <a data-toggle="collapse" data-target="#collapseOne" class="read-more"><img src="./assets/images/add-button.svg" />
-            </a>
-          </div>-->
+        <!-- Trigger the modal with a button -->
+        <a class="btn btn-default" data-toggle="modal" data-target="#myModal"><img src="./assets/images/add-button.svg" /></img> En savoir plus</a>
 
-          <!-- Trigger the modal with a button -->
-          <a class="btn btn-default" data-toggle="collapse" data-target="#collapseOne"><img src="./assets/images/add-button.svg" /></img> En savoir plus</a>
+        <!-- Modal -->
+        <div id="myModal" class="modal fade" role="dialog">
+          <div class="modal-dialog">
 
+            <!-- Modal content-->
+            <div class="modal-content">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+                <h3 class="modal-title">En savoir plus</h4>
+              </div>
+              <div class="modal-body">
+                <h4>Documents</h4>
+                <p>Pour plus d'informations sur ce projet, consultez :
+                  <ul>
+                    <li>
+                      <a href="https://www.youtube.com/watch?v=vyiVRtNkrHI">IAST Newcomers 2014 - Maxime Cauchoix</a>
+                    </li>
+                    <li>
+                      <a href="https://drive.google.com/open?id=1DaUU0x_wUZSqDEomvS16wGJ-7Y2ng5Lx9hKu_dAWyXA">Présentation du projet OpenFeeder au FabLab Artilect</a>
+                    </li>
+                    <li>
+                      <a href="https://docs.google.com/document/d/1HbaWMe1Ht085f7VVjddLcBeI3NcZt-81qIP3hx4l6DE/edit?usp=sharing">Documentation du projet</a>
+                    </li>
+                  </ul>
+                  <h4>Participer</h4>
+                  <p>Si vous souhaitez modifier ou étendre le logiciel ou le matériel OpenFeeder, nous vous suggérons de discuter
+                    de vos idées avec les développeurs avant de commencer à travailler avec eux. De cette façon, vous vous
+                    pouvez coordonner avec l'équipe OpenFeeder et d'autres, donnant à votre travail une plus grande chance
+                    d'être intégré dans la version officielle.
+                  </p>
+              </div>
 
-          <!-- Collapse -->
-
-          <div id="collapseOne" class="panel-collapse panel panel-default collapse off">
-         
-            <div class="panel-body">
-              <h3>Documents</h3>
-              <p>Pour plus d'informations sur ce projet, consultez :
-                <ul>
-                  <li>
-                    <a href="https://www.youtube.com/watch?v=vyiVRtNkrHI">IAST Newcomers 2014 - Maxime Cauchoix</a>
-                  </li>
-                  <li>
-                    <a href="https://drive.google.com/open?id=1DaUU0x_wUZSqDEomvS16wGJ-7Y2ng5Lx9hKu_dAWyXA">Présentation du projet OpenFeeder au FabLab Artilect</a>
-                  </li>
-                  <li>
-                    <a href="https://docs.google.com/document/d/1HbaWMe1Ht085f7VVjddLcBeI3NcZt-81qIP3hx4l6DE/edit?usp=sharing">Documentation du projet</a>
-                  </li>
-                </ul>
-                <h3>Participer</h3>
-                <p>Si vous souhaitez modifier ou étendre le logiciel ou le matériel OpenFeeder, nous vous suggérons de discuter
-                  de vos idées avec les développeurs avant de commencer à travailler avec eux. De cette façon, vous vous
-                  pouvez coordonner avec l'équipe OpenFeeder et d'autres, donnant à votre travail une plus grande chance
-                  d'être intégré dans la version officielle.
-                </p>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Fermer</button>
+              </div>
             </div>
 
           </div>
+        </div>
+
+      </div>
+    </div>
+
+
+    <div id="partenaires" class="row section container-fluid row-high-height">
+      <div class="col-sm-8 col-sm-offset-2">
+        <h2>Partenaires</h2>
+        <div class="row">
+
+          <div class="col-sm-4 ">
+
+            <div class="row-sm-height flipcard">
+              <div class="front">
+                <img class="img-responsive center-block btn btn-default" src="./assets/images/logo_cnrs_moulis.jpg"></img>
+              </div>
+              <div class="back">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><span>CNRS - Moulis</span><span class="pull-right">&times;</span></h4>
+                  </div>
+                  <div class="panel-body">
+                    <p>C'est dans cette unité de recherche du CNRS que se déroulent les expériences avec l'OpenFeeder. </p>
+                    <p>La station d’<a target="_blank" href="http://www.ecoex-moulis.cnrs.fr">écologie expérimentale et théorique</a> est située à Moulis,
+                      en Ariège.</p>
+                  </div>
+                </div>
+
+
+              </div>
+            </div>
+          </div>
+
+          <div class="col-sm-4">
+
+            <div class="row-sm-height flipcard">
+              <div class="front">
+                <img class="img-responsive center-block btn btn-default" src="./assets/images/logo_iast.jpg"></img>
+              </div>
+              <div class="back">
+                <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><span>IAST</span><span class="pull-right">&times;</span></h4>
+                  </div>
+                  <div class="panel-body">
+                    <p>
+                      OpenFeeder est utilisé par Maxime Cauchoix, en post doctorat à l'<a target="_blank" href="http://www.iast.fr/francais">IAST</a>.
+                    </p>
+                    <p>L’Institut des Etudes Avancées de Toulouse (IAST) est rattaché à l’école d’économie et regroupe des chercheurs de différentes domaines.
+                    </p>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+          </div>
+
+
+          <div class="col-sm-4">
+            <div class="row-sm-height flipcard">
+              <div class="front">
+                <img class="img-responsive center-block btn btn-default" src="./assets/images/logo_artilect.jpg"></img>
+              </div>
+              <div class="back">
+                  <div class="panel panel-default">
+                  <div class="panel-heading">
+                    <h4 class="panel-title"><span>Artilect FabLab</span><span class="pull-right">&times;</span></h4>
+                  </div>
+                  <div class="panel-body">
+                    <p>
+                      <a target="_blank" href="http://www.artilect.fr/">Artilect FabLab Toulouse</a> soutient le développement de OpenFeeder en mettant à disposition ses locaux et son matériel.
+                    </p>
+                    <p>Avec plus de 1000 membres, Artilect FabLab est à la fois une association, une société et un centre de formation.
+                    </p>
+                  </div>
+                </div>
+                
+                
+                  
+                </a>
+              </div>
+            </div>
+          </div>
+
         </div>
       </div>
 
     </div>
 
+
+
     <div class="row container-fluid">
-      <div class="col-xs-12">
+      <div class="col-sm-8 col-sm-offset-2">
         <h2>Licence</h2>
         <p>OpenFeeder est un projet open source <i class="em em-grin"></i></p>
       </div>
@@ -270,22 +337,28 @@
 
     <!-- content section : team -->
     <div id="team" class="row section container-fluid">
-      <div class="col-xs-12">
+      <div class="col-sm-8 col-sm-offset-2">
         <h2>Equipe</h2>
-        <p>L'équipe OpenFeeder est composée de</p>
+        <p>L'équipe OpenFeeder est composée de : </p>
         <ul>
-          <li><a href="http://www.iast.fr/member/maxime-cauchoix">Maxime CAUCHOIX</a></li>
-          <li><a href="http://tonic.inserm.fr/arnauld-biganzoli-404340.kjsp">Arnauld BIGANZOLI</a></li>
-          <li><a href="http://select-design.net/">Vincent GUIRAUD</a></li>
-          <li><a href="http://blog.developpez.com/dut/">Jérôme BRIOT</a></li>
+          <li><a target="_blank" href="http://www.iast.fr/member/maxime-cauchoix">Maxime CAUCHOIX</a></li>
+          <li><a target="_blank" href="http://tonic.inserm.fr/arnauld-biganzoli-404340.kjsp">Arnauld BIGANZOLI</a></li>
+          <li><a target="_blank" href="http://select-design.net/">Vincent GUIRAUD</a></li>
+          <li><a target="_blank" href="http://blog.developpez.com/dut/">Jérôme BRIOT</a></li>
           <li><a href="mailto:mcrespin31@gmail.com">Maurice CRESPIN</a></li>
         </ul>
+
+        <p>Le site a été réalisé par : </h2>
+          <ul>
+            <li><a target="_blank" href="https://github.com/clemaurny">Clément LESAULNIER</a></li>
+            <li><a target="_blank" href="https://vvivanloc.github.io/">Vincent VIVANLOC</a></li>
+          </ul>
       </div>
     </div>
 
     <!-- content section : team -->
     <div id="copyright" class="row section container-fluid">
-      <div class="col-xs-12">
+      <div class="col-sm-8 col-sm-offset-2">
         <h2>Copyright</h2>
         <p>Le contenu du projet OpenFeeder est publié sous la Licence Creative Commons Attribution ShareAlike 3.0. CC BY-SA
           3.0

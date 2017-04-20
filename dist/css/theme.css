@@ -16,13 +16,6 @@
   text-decoration: none;
 }
 
-/* max width */
-body {
-    max-width: 1024px;
-    /*margin-left: auto;
-    margin-right: auto;*/
-}
-
 /* section default height */
 .section:first-of-type {
   padding-top:70px;
@@ -30,13 +23,21 @@ body {
 }
 .section {
   padding-top:50px;
-  height:500px;
 }
 
 /* change carousel caption */
 .carousel-caption {
   color: #fff !important;
-  background: rgba(128,128,128,0.5);
+  background: rgba(160,160,160,0.25);
+}
+
+.carousel-indicators li {
+    background-color: rgba(0,0,0,0) !important;
+    border: 1px solid #777 !important; 
+}
+
+.carousel-indicators .active {
+    background-color: #777 !important;    
 }
 
 /* todo : resize image */
@@ -70,40 +71,32 @@ body {
   background-color: #fff;
   color: #d9230f;
 }
+
+
+
 .btn {
   font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  transition: box-shadow 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transition-delay: 0.2s;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2) !important;
+  background-image: none !important;
+  background-color: #fff !important;
 }
-.btn-default,
+.btn:active,
 .btn-default:hover {
-  filter: none;
-  border: 1px solid #2e2f2f !important; 
-  background-image: none;
+  box-shadow: 0 6px 15px 0 rgba(0, 0, 0, 0.2)  !important;
+  transition-delay: 0s  !important;
+  background-image: none !important;
+  background-color: #fff !important;
 }
-.btn-primary,
-.btn-primary:hover {
+
+.btn-default {
   filter: none;
-  border: 1px solid #a91b0c;
+  border: 1px solid #ddd !important; 
+  background-image: none !important;
+  background-color: #fff !important;
 }
-.btn-success,
-.btn-success:hover {
-  filter: none;
-  border: 1px solid #2f6405;
-}
-.btn-info,
-.btn-info:hover {
-  filter: none;
-  border: 1px solid #02749c;
-}
-.btn-warning,
-.btn-warning:hover {
-  filter: none;
-  border: 1px solid #79377c;
-}
-.btn-danger,
-.btn-danger:hover {
-  filter: none;
-  border: 1px solid #ac6819;
-}
+
 
 .btn img {
   width: 24px;
@@ -121,71 +114,60 @@ legend {
 label {
   font-weight: normal;
 }
-.has-warning .help-block,
-.has-warning .control-label,
-.has-warning .radio,
-.has-warning .checkbox,
-.has-warning .radio-inline,
-.has-warning .checkbox-inline,
-.has-warning.radio label,
-.has-warning.checkbox label,
-.has-warning.radio-inline label,
-.has-warning.checkbox-inline label,
-.has-warning .form-control-feedback {
-  color: #d9831f;
-}
-.has-warning .form-control,
-.has-warning .form-control:focus {
-  border-color: #d9831f;
-}
-.has-error .help-block,
-.has-error .control-label,
-.has-error .radio,
-.has-error .checkbox,
-.has-error .radio-inline,
-.has-error .checkbox-inline,
-.has-error.radio label,
-.has-error.checkbox label,
-.has-error.radio-inline label,
-.has-error.checkbox-inline label,
-.has-error .form-control-feedback {
-  color: #d9230f;
-}
-.has-error .form-control,
-.has-error .form-control:focus {
-  border-color: #d9230f;
-}
-.has-success .help-block,
-.has-success .control-label,
-.has-success .radio,
-.has-success .checkbox,
-.has-success .radio-inline,
-.has-success .checkbox-inline,
-.has-success.radio label,
-.has-success.checkbox label,
-.has-success.radio-inline label,
-.has-success.checkbox-inline label,
-.has-success .form-control-feedback {
-  color: #469408;
-}
-.has-success .form-control,
-.has-success .form-control:focus {
-  border-color: #469408;
-}
-.pager a {
-  color: #444444;
-}
-.pager a:hover,
-.pager .active > a {
-  border-color: #d9230f;
-  color: #fff;
-}
-.pager .disabled > a {
-  border-color: #dddddd;
+
+/* fix ugly Bootstrap fix causing scrolling mess+nav button position error in mobile definition */
+/* https://github.com/twbs/bootstrap/issues/10875 */
+.row {
+  margin-left: 0px !important; 
+  margin-right: 0px !important; 
 }
 
-img.logopartenaires {
-  height: 150px; 
-  display: block;
-  width:auto;
+/* fix sections height on image responsive height changes */
+@media (max-width: 767px) {
+    .row-high-height {
+        min-height:800px;
+    }
+
+    .row-sm-height {
+        min-height:220px;
+    }    
 }
+
+@media (max-width: 320px) {
+    .row-xs-height {
+        min-height:750px;
+    }
+
+}
+
+
+
+/** fix image ratio container */
+/* see http://www.minimit.com/articles/tips-resources/css-aspect-ratio-to-have-images-of-same-height 
+from http://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css */
+
+.item-image {
+  position: relative;
+  overflow: hidden;
+  padding-bottom: 80%; /* here the desired aspect ratio */
+}
+.item-image img {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.item-image .embed-responsive {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+/* debug */
+ /**{border: 1px solid red} */
