@@ -17,6 +17,8 @@ $(function () {
         $(this).next(".dropdown-menu").toggle();
     });
 
+    //flip
+    $(".flipcard").flip();
 });
 
 
