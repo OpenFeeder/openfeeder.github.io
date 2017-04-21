@@ -12,7 +12,7 @@
 }
 
 .nav a {
-  color: #33781e !important;   
+  color: #33781e !important;
   text-decoration: none;
 }
 
@@ -33,11 +33,11 @@
 
 .carousel-indicators li {
     background-color: rgba(0,0,0,0) !important;
-    border: 1px solid #777 !important; 
+    border: 1px solid #777 !important;
 }
 
 .carousel-indicators .active {
-    background-color: #777 !important;    
+    background-color: #777 !important;
 }
 
 /* todo : resize image */
@@ -48,7 +48,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   float: right;
-  margin: 10px;  
+  margin: 10px;
 }
 
 .minilogo {
@@ -57,7 +57,7 @@
   background-size: contain;
   background-image: url(../../assets/images/img_logo_openfeeder.png);
   background-repeat: no-repeat;
-  margin: 10px;  
+  margin: 10px;
 
 }
 
@@ -92,7 +92,7 @@
 
 .btn-default {
   filter: none;
-  border: 1px solid #ddd !important; 
+  border: 1px solid #ddd !important;
   background-image: none !important;
   background-color: #fff !important;
 }
@@ -118,8 +118,8 @@ label {
 /* fix ugly Bootstrap fix causing scrolling mess+nav button position error in mobile definition */
 /* https://github.com/twbs/bootstrap/issues/10875 */
 .row {
-  margin-left: 0px !important; 
-  margin-right: 0px !important; 
+  margin-left: 0px !important;
+  margin-right: 0px !important;
 }
 
 /* fix sections height on image responsive height changes */
@@ -130,7 +130,15 @@ label {
 
     .row-sm-height {
         min-height:220px;
-    }    
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+    
+    li {
+      font-size: 1.2em;
+    }
 }
 
 @media (max-width: 320px) {
@@ -143,7 +151,7 @@ label {
 
 
 /** fix image ratio container */
-/* see http://www.minimit.com/articles/tips-resources/css-aspect-ratio-to-have-images-of-same-height 
+/* see http://www.minimit.com/articles/tips-resources/css-aspect-ratio-to-have-images-of-same-height
 from http://stackoverflow.com/questions/1495407/maintain-the-aspect-ratio-of-a-div-with-css */
 
 .item-image {
