@@ -3,7 +3,6 @@
 
 This procedure was tested on Lubuntu 16.04 LTS Xenial Xerus on March 2017. It might change on a different OS.
 
-
 1. Install nodejs
 
     [Node.js®](https://nodejs.org/en/) is a JavaScript runtime built on Chrome's V8 JavaScript engine. 

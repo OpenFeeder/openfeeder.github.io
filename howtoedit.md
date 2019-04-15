@@ -1,8 +1,7 @@
 
-
 # How to edit the site
 
-# Site folder layout
+## Site folder layout
 
 This is the website folder layout:
 
@@ -17,12 +16,11 @@ This is the website folder layout:
         - bootstrap.min.css <- bootswatch theme
         - theme.css <- style customization
 
-
-# Change the text content
+## Change the text content
 
 => Edit the file `index.html`
     
-## Edit an existing section
+### Edit an existing section
 
 The file `index.html` contains the whole one page website. 
 The web site text content starts at the line containing the comment:
@@ -41,7 +39,7 @@ Choose a given section.
           ...
     </div>
 </div>
-``` 
+```
 
 Inside this section, you can write some [HTML](http://www.cheat-sheets.org/sites/html.su/) code. However, since this site is built over Bootstrap, you can also use predefined [Bootstrap typography styles](https://www.w3schools.com/bootstrap/bootstrap_typography.asp).
 
@@ -70,9 +68,9 @@ Do not forget to identify the added section (*my_section_anchor*):
           ...
     </div>
 </div>
-``` 
+```
 
-# Add pictures to carousel
+## Add pictures to carousel
 
 => edit the file `index.html`
 
@@ -111,12 +109,9 @@ Increment the number *_increment_number_* (here, it should be equal to 4)
 </div>
 ```
 
-# Change the style
+## Change the style
 
 => edit the file `dist/css/theme.css`
 
 The theme is mainly defined by `bootstrap.min.css`. 
 You can override some settings by editing the [cascading style sheet](https://www.w3schools.com/css/default.asp) `theme.css`.
-
-
-    
